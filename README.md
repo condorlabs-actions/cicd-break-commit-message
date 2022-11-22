@@ -12,9 +12,9 @@ GitHub Action that analyzes and breaks a commit message used in CI/CD pipelines
 
 Note that the commit message must have the following structure:
 
-"This is the commit description. **JIRA links:** link1.com, link2.com, link3.com"
+"This is the commit description. **JIRA tickets:** link1.com, link2.com, link3.com"
 
-`JIRA links:` is required and the links must be separated by commas.
+The string `JIRA tickets:` is required and the links must be separated by commas.
 
 ## Outputs
 

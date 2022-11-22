@@ -1,10 +1,10 @@
 const core = require('@actions/core');
 
 const commitMessage = core.getInput('commit_message')
-const delimiter = 'JIRA links:';
+const delimiter = 'JIRA tickets:';
 
 if (!commitMessage.includes(delimiter)) {
-  throw new Error('No delimiter found in the commit message. Add the `JIRA links:` delimiter to the commit message.');
+  throw new Error('No delimiter found in the commit message. Add the `JIRA tickets:` delimiter to the commit message.');
 }
 
 const [description, links] = commitMessage.split(delimiter)
