@@ -1,0 +1,17 @@
+name: 'Break Commit'
+description: 'Breaks a commit message into description and an array of JIRA links'
+branding:
+  icon: align-center
+  color: purple
+outputs:
+  message:
+    description: 'Description part of the commit message'
+  links_list:
+    description: 'Array of JIRA links'
+inputs:
+  commit_message:
+    description: 'Commit message that contains a description and a comma separated list of JIRA links'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
