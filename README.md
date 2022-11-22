@@ -5,7 +5,7 @@ GitHub Action that analyzes and breaks a commit message used in CI/CD pipelines
 
 ```yaml
   - name: Break commit message
-    uses: condorlabs-actions/cicd-break-commit-message@v1.0.0
+    uses: condorlabs-actions/cicd-break-commit-message@v2.0.0
     with:
       commit_message: ${{ github.event.head_commit.message }}
 ```
