@@ -13,5 +13,5 @@ inputs:
     description: 'Commit message that contains a description and a comma separated list of JIRA links'
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
