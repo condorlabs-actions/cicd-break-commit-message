@@ -4,7 +4,7 @@ const commitMessage = core.getInput('commit_message');
 
 const messageDelimiter = '---';
 const jiraDelimiter = 'JIRA tickets:';
-const versionDelimiter = 'New version bump:'
+const versionDelimiter = 'New version bump type:'
 
 if (!commitMessage.includes(versionDelimiter)) {
   throw new Error('No delimiter found in the commit message. Add the `---` delimiter to the commit message.');
@@ -15,7 +15,7 @@ if (!commitMessage.includes(jiraDelimiter)) {
 }
 
 if (!commitMessage.includes(versionDelimiter)) {
-  throw new Error('No delimiter found in the commit message. Add the `New version bump:` delimiter to the commit message.');
+  throw new Error('No delimiter found in the commit message. Add the `New version bump type:` delimiter to the commit message.');
 }
 
 const [message, rest] = commitMessage.trim().split(messageDelimiter);
