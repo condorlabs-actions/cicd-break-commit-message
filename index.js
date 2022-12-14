@@ -6,7 +6,7 @@ const messageDelimiter = '---';
 const jiraDelimiter = 'JIRA tickets:';
 const versionDelimiter = 'New version bump type:'
 
-if (!commitMessage.includes(versionDelimiter)) {
+if (!commitMessage.includes(messageDelimiter)) {
   throw new Error('No delimiter found in the commit message. Add the `---` delimiter to the commit message.');
 }
 
