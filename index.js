@@ -2,12 +2,12 @@ const core = require('@actions/core');
 
 const commitMessage = core.getInput('commit_message');
 
-const messageDelimiter = '---';
+const messageDelimiter = '---cicd---';
 const jiraDelimiter = 'JIRA tickets:';
 const versionDelimiter = 'New version bump type:'
 
 if (!commitMessage.includes(messageDelimiter)) {
-  throw new Error('No delimiter found in the commit message. Add the `---` delimiter to the commit message.');
+  throw new Error('No delimiter found in the commit message. Add the `---cicd---` delimiter to the commit message.');
 }
 
 if (!commitMessage.includes(jiraDelimiter)) {
